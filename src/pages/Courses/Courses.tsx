@@ -10,6 +10,7 @@ function Courses() {
         <Course />
         <Course />
         <Course />
+        <Course />
       </ul>
     </div>
   );

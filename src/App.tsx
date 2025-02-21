@@ -3,6 +3,8 @@ import Header from "./components/Header/Header";
 import { JSX } from "react";
 import Home from "./pages/Home/Home";
 import Courses from "./pages/Courses/Courses";
+import CourseVideos from "./pages/CourseVideos/CourseVideos";
+import Profile from "./pages/Profile/Profile";
 
 interface IRouterElement {
   element: JSX.Element;
@@ -18,6 +20,14 @@ const IRoutersCatalog: IRouterElement[] = [
     element: <Courses />,
     path: "/courses",
   },
+  {
+    element: <CourseVideos />,
+    path: "/courses/:id",
+  },
+  {
+    element: <Profile />,
+    path: "/profile",
+  },
 ];
 
 function App() {
@@ -26,11 +36,9 @@ function App() {
       <Header />
       <div className="w-full">
         <Routes>
-          {
-            IRoutersCatalog.map(({ element, path }) => (
-              <Route key={path} path={path} element={element} />
-            ))
-          }
+          {IRoutersCatalog.map(({ element, path }) => (
+            <Route key={path} path={path} element={element} />
+          ))}
         </Routes>
       </div>
     </div>
