@@ -1,4 +1,4 @@
-import { Modal } from "antd";
+import { Modal, QRCode } from "antd";
 import React, { FC } from "react";
 import { createPortal } from "react-dom";
 import { FaInstagram, FaTelegramPlane, FaVk, FaYoutube } from "react-icons/fa";
@@ -22,6 +22,11 @@ const AboutModal: FC<IAboutModal> = ({ showModal, setShowModal }) => {
         width={600}
         footer={null}
       >
+        <p className="text-2xl font-bold">Каналы разработчиков (QR-Code)</p>
+        <div className="flex flex-row gap-x-4 my-2">
+          <QRCode value="https://t.me/khanzele_dev" size={250} />
+          <QRCode value="https://t.me/mgdov_dev" size={250} />
+        </div>
         <div className="text-gray-700">
           <p className="leading-relaxed mb-4">
             <b>IT-Куб (IT-Cube)</b> — образовательная компания в сфере IT,
