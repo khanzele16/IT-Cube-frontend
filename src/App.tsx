@@ -1,11 +1,11 @@
 import { Route, Routes } from "react-router-dom";
 import Header from "./components/Header/Header";
-import { JSX } from "react";
+import React, { JSX } from "react";
 import Home from "./pages/Home/Home";
 import Courses from "./pages/Courses/Courses";
 import CourseVideos from "./pages/CourseVideos/CourseVideos";
 import Profile from "./pages/Profile/Profile";
-
+import News from "./pages/News/News";
 interface IRouterElement {
   element: JSX.Element;
   path: string;
@@ -15,6 +15,10 @@ const IRoutersCatalog: IRouterElement[] = [
   {
     element: <Home />,
     path: "/",
+  },
+  {
+    element: <News />,
+    path: "/news",
   },
   {
     element: <Courses />,
