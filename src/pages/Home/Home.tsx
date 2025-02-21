@@ -11,10 +11,8 @@ function Home() {
             <div className="w-full flex items-center gap-x-5">
               <Button className='font-medium' variant='solid' color='primary' size='large'>Записаться</Button>
               <Button className='font-medium' >Записаться</Button>
-
             </div>
           </div>
-
         </div>
       </div>
     </div>
